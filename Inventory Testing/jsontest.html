@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<title> KEKW TESTING </title>
+	<style>
+	</style>
+	</head>
+
+
+	<body>
+		<h1> Testing JSON READ </h1>
+		<div id='read'></div>
+	</body>
+
+<script>
+	var pipeo = new XMLHttpRequest();
+	pipeo.onreadystatechange = reportStatus;
+	pipeo.open("GET","/Users/josh/Desktop/Senior Year/Spring Semester/CMSC434/434Project/test.txt",true);
+	pipeo.send();
+
+function reportStatus(){
+	if (pipeo.readyState == 4){
+		document.getElementById('read').innerHTML = pipeo.responseText;
+	} else {
+		document.getElementById('read').innerHTML = "whoops"
+	};
+}
+function parseJson(jsondata){
+}
+
+</script>
+</html>
