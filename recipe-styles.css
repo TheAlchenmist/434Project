@@ -1,0 +1,59 @@
+/* center align header */
+h1 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+p {
+    font-family: "Times New Roman";
+    font-size: 24px;
+}
+
+ol {
+    text-align: center;
+    list-style-position: inside;
+    transform: translateX(-175px);
+}
+
+/* add borders to table */
+/*
+table, th, td {
+    border: 1px solid black;
+}
+*/
+
+/* align columns for table */
+#mytable {
+    width: 500px;
+    margin: 0 auto;
+}
+
+#mytable td {
+    width: 250px;
+}
+
+#mytable .left {
+    text-align: left;
+}
+
+#mytable .right {
+    text-align: right;
+}
+
+/* center align for table */
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*
+SOURCES
+https://stackoverflow.com/questions/26118293/css-positioning-to-center-plus-x-pixel
+*/
