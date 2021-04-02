@@ -1,48 +1,29 @@
-/* center align header */
-h1 {
-    text-align: center;
-}
-
-h3 {
-    text-align: center;
-}
-
-/*
-body {
-    background-color: #ffffff;
-}
-
-p {
-    font-family: "Times New Roman";
-    font-size: 24px;
-}
-*/
-
 ol {
+    /* items are centered, maybe wanna change later? */
     text-align: center;
     list-style-position: inside;
-    transform: translateX(-175px);
+    transform: translateX(-20px);
 }
 
 /* add borders to table */
-/*
+
 table, th, td {
     border: 1px solid black;
 }
-*/
+
 
 /* align columns for table */
 #mytable {
-    width: 500px;
+    width: 900px;
     margin: 0 auto;
 }
 
 #mytable td {
-    width: 250px;
+    width: 300px;
 }
 
-#mytable .left {
-    text-align: left;
+#mytable .center {
+    text-align: center;
 }
 
 #mytable .right {
