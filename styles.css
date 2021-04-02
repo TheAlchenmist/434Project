@@ -1,3 +1,10 @@
+.app-page{
+    /* background-color: #DCBE61; */
+    height: 768px;
+    width: 1024px;
+    border: 20px solid gray;
+}
+
 body {
     /*
     COLORS:
@@ -24,5 +31,5 @@ h2 {
 
 h3 {
     text-align: center;
-    font-size: 30;
+    font-size: 28px;
 }
