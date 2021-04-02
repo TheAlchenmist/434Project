@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<title> KEKW TESTING </title>
+	<style>
+	</style>
+	</head>
+
+
+	<body>
+		<h1> Testing JSON READ </h1>
+		<div id='read'></div>
+		<div id='test'></div>
+	</body>
+
+<script>
+var text = '{ "foods" : [' +
+'{ "item":"banana" , "edate":"1/21" },' +
+'{ "item":"apple" , "edate":"1/22" },' +
+'{ "item":"pear" , "edate":"1/23" } ]}';
+localStorage.setItem("foods", text);
+var obj = JSON.parse(localStorage.getItem("foods"));
+obj.foods[3] = {"item":"grapes","edate":"1/24"};
+localStorage.setItem("foods", JSON.stringify(obj));
+obj = JSON.parse(localStorage.getItem("foods"));
+document.getElementById("read").innerHTML =
+obj.foods[3].item + " " + obj.foods[3].edate;
+document.getElementById("test").innerHTML = JSON.stringify(obj);
+</script>
+</html>
