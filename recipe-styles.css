@@ -36,6 +36,10 @@ table, th, td {
 }
 
 /* buttons */
+button {
+    font-size: 18px;
+}
+
 .btn {
     width: 300px;
     border: none;
