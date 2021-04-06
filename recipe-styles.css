@@ -11,7 +11,6 @@ table, th, td {
     border: 1px solid black;
 }
 
-
 /* align columns for table */
 #mytable {
     width: 900px;
@@ -34,6 +33,20 @@ table, th, td {
 .center {
     margin-left: auto;
     margin-right: auto;
+}
+
+/* buttons */
+.btn {
+    width: 300px;
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: #dcbe61;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #ecce71;
 }
 
 /*
