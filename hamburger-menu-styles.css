@@ -22,7 +22,7 @@ span {
 }
 
 #menuToggle a:hover {
-    color: tomato;
+    color: #9801c3;
 }
 
 
@@ -101,7 +101,7 @@ span {
     padding: 50px;
     padding-top: 125px;
 
-    background: #ededed;
+    background: #ecce71;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
     /* to stop flickering of text in safari */
