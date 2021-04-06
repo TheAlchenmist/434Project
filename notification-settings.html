@@ -4,21 +4,6 @@
 <head>
 	<link rel="stylesheet" href="styles.css">
 	<style>
-		/*
-		h1 {
-			text-align: center;
-		}
-
-		body {
-			background-color: #ffffff;
-		}
-
-		p {
-			font-family: "Times New Roman";
-			font-size: 24px;
-		}
-		*/
-
 		/* add borders to table */
 		/*
 		table, th, td {
@@ -26,14 +11,15 @@
         }
 		*/
 
-		/* align columns for table */
+		/* table */
 		#mytable {
-			width: 500px;
+			width: 20%;
 			margin: 0 auto;
 		}
 
-		#mytable td {
-			width: 250px;
+		/* add space below row */
+		#mytable tr.space>td {
+			padding-bottom: 5%;
 		}
 
 		#mytable .left {
@@ -103,7 +89,7 @@
 			transform: translateX(26px);
 		}
 
-		/* Rounded sliders */
+		/* rounded sliders */
 		.slider.round {
 			border-radius: 34px;
 		}
@@ -117,35 +103,37 @@
 <body>
 	<h1>NOTIFICATION SETTINGS</h1>
 
-	<table id="mytable" class="center" style="width:20%">
-		<tr>
-			<td>All Notifications</td>
-			<td class="right">
-				<label class="switch">
-					<input type="checkbox">
-					<span class="slider round"></span>
-				</label>
-			</td>
-		</tr>
-		<tr>
-			<td>Spoilage</td>
-			<td class="right">
-				<label class="switch">
-					<input type="checkbox">
-					<span class="slider round"></span>
-				</label>
-			</td>
-		</tr>
-		<tr>
-			<td>Low Inventory</td>
-			<td class="right">
-				<label class="switch">
-					<input type="checkbox">
-					<span class="slider round"></span>
-				</label>
-			</td>
-		</tr>
-	</table>
+	<div>
+		<table id="mytable" class="center">
+			<tr class="space">
+				<td>All Notifications</td>
+				<td class="right">
+					<label class="switch">
+						<input type="checkbox">
+						<span class="slider round"></span>
+					</label>
+				</td>
+			</tr>
+			<tr>
+				<td>Spoilage</td>
+				<td class="right">
+					<label class="switch">
+						<input type="checkbox">
+						<span class="slider round"></span>
+					</label>
+				</td>
+			</tr>
+			<tr>
+				<td>Low Inventory</td>
+				<td class="right">
+					<label class="switch">
+						<input type="checkbox">
+						<span class="slider round"></span>
+					</label>
+				</td>
+			</tr>
+		</table>
+	</div>
 </body>
 
 </html>
@@ -154,4 +142,5 @@
     SOURCES
     https://www.w3schools.com/howto/howto_css_switch.asp
     https://stackoverflow.com/questions/7281482/right-aligning-one-column-and-left-aligning-the-other-within-one-table/7281536
+	https://stackoverflow.com/questions/351058/space-between-two-rows-in-a-table
 -->
