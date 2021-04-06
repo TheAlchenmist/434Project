@@ -1,5 +1,5 @@
 .app-page{
-    /* background-color: #DCBE61; */
+    /* background-color: #dcbe61; */
     height: 768px;
     width: 1024px;
     border: 20px solid gray;
@@ -8,14 +8,12 @@
 body {
     /*
     COLORS:
-    ORANGE BG       #DCBE61
-    MAROON BG       #DCBE61
-    ORANGE NOTIF    #BB6239
-    YELLOW BG       #DCBE61
-    GREEN           #78866B
+    ORANGE BG       #dcbe61
+    ORANGE NOTIF    #bb6239
+    GREEN           #78866b
     */
 
-    background-color: #DCBE61;
+    background-color: #dcbe61;
     font-family: 'Raleway', Sans-Serif;
 }
 
