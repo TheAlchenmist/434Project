@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css?family=Cabin|Roboto:400,700|Roboto+Condensed:400,700");
+
+body{
+    background-color: #DCBE61;
+}
+
+.h2{
+    text-align: center;
+    font-family: 'Raleway', Sans-Serif;
+    font-size: 44px;
+}
+
+.search-bar{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    background: #6C464E;
+    transform: translate(-50%, -50%);
+    height: 40px;
+    border-radius: 30px;
+    padding: 5px;
+}
+.search-bar:hover > .search-text{
+    width: 300px;
+    padding: 0 5px;
+}
+
+.search-bar:hover > .search-btn{
+    background: white;
+    width: 30px;
+    height: 29px;
+}
+
+.search-btn{
+    color:black;
+    float: right;
+    width: 30px;
+    height: 29px;
+    border-radius: 50%;
+    background: #6C464E;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    transition: 0.4s;
+}
+
+.search-text{
+    border:none;
+    background:none;
+    outline:none;
+    float:left;
+    color:white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 30px;
+    width: 0px;
+}
+
+
+
+
+
+
+    
+
+
+
