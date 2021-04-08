@@ -1,8 +1,23 @@
+@import url("https://fonts.googleapis.com/css?family=Cabin|Roboto:400,700|Roboto+Condensed:400,700");
+
+.body{
+  color:white;
+}
+
+.app-page{
+  background-color: #DCBE61;
+  height: 768px;
+  width: 1024px;
+  border: 20px solid gray
+}
+
+
 .container {
   overflow: hidden;
 }
 
 .filterDiv {
+  font-family: 'Raleway', Sans-Serif;
   float: left;
   background-color: #2196F3;
   color: #ffffff;
@@ -14,20 +29,24 @@
 }
 
 .filterDiv.active {
+  font-family: 'Raleway', Sans-Serif;
 	background-color: #f1f1f1;
 	color: white;
 }
 
 .filterDiv:hover {
+  font-family: 'Raleway', Sans-Serif;
   background-color: #ddd;
 }
 /* The "show" class is added to the filtered elements */
 .show {
+  font-family: 'Raleway', Sans-Serif;
   display: block;
 }
 
 /* Style the buttons */
 .btn {
+  font-family: 'Raleway', Sans-Serif;
   border: none;
   outline: none;
   padding: 12px 16px;
@@ -37,11 +56,13 @@
 
 /* Add a light grey background on mouse-over */
 .btn:hover {
+  font-family: 'Raleway', Sans-Serif;
   background-color: #ddd;
 }
 
 /* Add a dark background to the active button */
 .btn.active {
+  font-family: 'Raleway', Sans-Serif;
   background-color: #666;
   color: white;
 }
