@@ -35,12 +35,10 @@
 }
 
 .filterDiv:hover {
-  font-family: 'Raleway', Sans-Serif;
   background-color: #ddd;
 }
 /* The "show" class is added to the filtered elements */
 .show {
-  font-family: 'Raleway', Sans-Serif;
   display: block;
 }
 
@@ -56,13 +54,11 @@
 
 /* Add a light grey background on mouse-over */
 .btn:hover {
-  font-family: 'Raleway', Sans-Serif;
   background-color: #ddd;
 }
 
 /* Add a dark background to the active button */
 .btn.active {
-  font-family: 'Raleway', Sans-Serif;
   background-color: #666;
   color: white;
 }
