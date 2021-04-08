@@ -1,71 +1,102 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="home.css">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway:300,400" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
-    </head>
 
-    <body>
-        <div class="app-page">
-            <div class="header">
-                <h2 class = "h2">
-                    Golub's Fridge Home
-                </h2>
+<head>
+    <link rel="stylesheet" href="home-styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
+    <link rel="stylesheet" href="../hamburger-menu-styles.css">
+</head>
+
+<body>
+    <div class="app-page">
+        <!-- hamburger menu -->
+		<div id="menuToggle">
+			<input type="checkbox" />
+
+			<span></span>
+			<span></span>
+			<span></span>
+
+			<ul id="menu">
+				<h1>
+					<a href="home.html">
+						iFridge
+					</a>
+				</h1>
+				<a href="../inventory/inventory.html">
+					<li>Inventory</li>
+				</a>
+				<a href="#">
+					<li>Shopping List</li>
+				</a>
+				<a href="../recipe-finder/recipe-home.html">
+					<li>Recipe Finder</li>
+				</a>
+				<a href="../settings/settings.html">
+					<li>Settings</li>
+				</a>
+			</ul>
+		</div>
+
+        <div class="header">
+            <h2 class="h2">
+                Golub's Fridge Home
+            </h2>
+        </div>
+
+        <div class="notifications">
+            <div class="alert1">
+                <div class="immediate">
+                    <i class="material-icons">&#xe000;</i>
+                </div>
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                <strong>[Expired Milk]</strong> Time to clean out the milk cartons, Golub. It has been 2 weeks since we
+                purchased.
             </div>
-        
-                <div class="notifications" >
-                    <div class="alert1">
-                        <div class="immediate">
-                            <i class="material-icons">&#xe000;</i>
-                        </div>
-                        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-                        <strong>[Expired Milk]</strong> Time to clean out the milk cartons, Golub. It has been 2 weeks since we purchased.
-                    </div>
-                    
-                    <div class="alert3">
-                        <div class="alarm">
-                            <i class="material-icons">&#xe190;</i>
-                        </div>
-                            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-                            <strong>[Reminder]</strong> Check water filter.
-                        </div>
-                    </div>
+
+            <div class="alert3">
+                <div class="alarm">
+                    <i class="material-icons">&#xe190;</i>
                 </div>
-        
-        
-        
-                <div class="social-menu">
-                        <ul>
-                            <li><a href=""><img src="../Images/inventory-fridge.png"></i></a></li>
-                            <li><a href=""><img src="../Images/recipe-finder-book.png"><i class="fa fa-recipes"></i></a></li>
-                            <li><a href=""><img src="../Images/shopping-cart.png"><i class="fa fa-shopping-cart"></i></a></li>
-                            <li><a href=""><img src="../Images/calendar.png"><i class="fa fa-calendar"></i></a></li>
-                            <li><a href=""><img src="../Images/settings-cogwheel.png"><i class="fa fa-settings"></i></a></li>
-                        </ul>
-                </div>
-        
-                <div class="weather">
-                    <div class="panel" id="left">
-                        <div class="date">
-                            Sunday, March 28, 2021
-                        </div>
-                        <div class="city">
-                            Washington D.C.
-                        </div>
-                        <div class="temperature">
-                            <img src="../Images/sun.png" alt="">
-                            52&deg;
-                        </div>
-                    </div>
-                    <div class="panel" id="right">
-                        <img src="../Images/washington.png" alt="">
-                    </div>
-                </div>
-            
-        </Container>
-    </body>
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                <strong>[Reminder]</strong> Check water filter.
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="social-menu">
+        <ul>
+            <li><a href=""><img src="../Images/inventory-fridge.png"></i></a></li>
+            <li><a href=""><img src="../Images/recipe-finder-book.png"><i class="fa fa-recipes"></i></a></li>
+            <li><a href=""><img src="../Images/shopping-cart.png"><i class="fa fa-shopping-cart"></i></a></li>
+            <li><a href=""><img src="../Images/calendar.png"><i class="fa fa-calendar"></i></a></li>
+            <li><a href=""><img src="../Images/settings-cogwheel.png"><i class="fa fa-settings"></i></a></li>
+        </ul>
+    </div>
+
+    <div class="weather">
+        <div class="panel" id="left">
+            <div class="date">
+                Sunday, March 28, 2021
+            </div>
+            <div class="city">
+                Washington D.C.
+            </div>
+            <div class="temperature">
+                <img src="../Images/sun.png" alt="">
+                52&deg;
+            </div>
+        </div>
+        <div class="panel" id="right">
+            <img src="../Images/washington.png" alt="">
+        </div>
+    </div>
+
+    </Container>
+</body>
+
 </html>
-
-

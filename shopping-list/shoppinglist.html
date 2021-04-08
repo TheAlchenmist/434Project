@@ -3,6 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../hamburger-menu-styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         body {
@@ -139,7 +140,34 @@
 </head>
 
 <body>
+    <!-- hamburger menu -->
+		<div id="menuToggle">
+			<input type="checkbox" />
 
+			<span></span>
+			<span></span>
+			<span></span>
+
+			<ul id="menu">
+				<h1>
+					<a href="../home/home.html">
+						iFridge
+					</a>
+				</h1>
+				<a href="../inventory/inventory.html">
+					<li>Inventory</li>
+				</a>
+				<a href="shoppinglist.html">
+					<li>Shopping List</li>
+				</a>
+				<a href="../recipe-finder/recipe-home.html">
+					<li>Recipe Finder</li>
+				</a>
+				<a href="../settings/settings.html">
+					<li>Settings</li>
+				</a>
+			</ul>
+		</div>
     <div id="myDIV" class="header">
         <h2 style="margin:5px">My Shopping List</h2>
         <input type="text" id="myInput" placeholder="Item...">

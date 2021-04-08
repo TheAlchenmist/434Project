@@ -2,88 +2,118 @@
 
 <head>
 	<link rel="stylesheet" href="../styles.css">
+	<link rel="stylesheet" href="../hamburger-menu-styles.css">
 </head>
 
 <body>
 	<div class=app-page>
+		<!-- hamburger menu -->
+		<div id="menuToggle">
+			<input type="checkbox" />
 
-		<h2>Edit Item Page</h2>
+			<span></span>
+			<span></span>
+			<span></span>
 
-		<p>Name</p>
-		<input id="name">
+			<ul id="menu">
+				<h1>
+					<a href="../home/home.html">
+						iFridge
+					</a>
+				</h1>
+				<a href="inventory.html">
+					<li>Inventory</li>
+				</a>
+				<a href="#">
+					<li>Shopping List</li>
+				</a>
+				<a href="../recipe-finder/recipe-home.html">
+					<li>Recipe Finder</li>
+				</a>
+				<a href="../settings/settings.html">
+					<li>Settings</li>
+				</a>
+			</ul>
+		</div>
+		<div>
+			<h2>Edit Item Page</h2>
 
-		<p>Expiration Date</p>
-		<input id="edate">
+			<p>Name</p>
+			<input id="name">
 
-		<p>Type (MAKE THESE RADIO BUTTONS)</p>
+			<p>Expiration Date</p>
+			<input id="edate">
 
-		<input id="type">
-		<br></br>
-		<button type="button" onclick="myFunction()">Submit</button>
+			<p>Type (MAKE THESE RADIO BUTTONS)</p>
 
-		<div id="debug"></div>
+			<input id="type">
+			<br></br>
+			<button type="button" onclick="myFunction()">Submit</button>
 
-		<script>
-			var information = JSON.parse(localStorage.getItem("edit"));
-			console.log(information);
-			var ID = information["UID"];
-			console.log(ID);
+			<div id="debug"></div>
 
-			var type, name, edate;
-			name = information["item"];
-			edate = information["edate"];
-			var inventory = JSON.parse(localStorage.getItem("inventory"));
-			var x, idx;
-			for (x in inventory) {
-				for (idx = 0; idx < inventory[x].length; idx++) {
-					if (inventory[x][idx]["UID"] == ID) {
-						type = x;
-					}
-				}
-			}
-			console.log(type);
+			<script>
+				var information = JSON.parse(localStorage.getItem("edit"));
+				console.log(information);
+				var ID = information["UID"];
+				console.log(ID);
 
-			document.getElementById("name").placeholder = name;
-			document.getElementById("edate").placeholder = edate;
-			document.getElementById("type").placeholder = type;
-
-			function myFunction() {
-
-				var newName, newEdate, newType;
-
-				// Get the value of the input fields
-				newName = document.getElementById("name").value;
-				newEdate = document.getElementById("edate").value;
-				newType = document.getElementById("type").value;
-
-				console.log(inventory);
-				// Change the original values
+				var type, name, edate;
+				name = information["item"];
+				edate = information["edate"];
+				var inventory = JSON.parse(localStorage.getItem("inventory"));
 				var x, idx;
 				for (x in inventory) {
-					console.log(inventory[x].length);
 					for (idx = 0; idx < inventory[x].length; idx++) {
 						if (inventory[x][idx]["UID"] == ID) {
-							console.log(inventory[x][idx]);
-							if (newName != "") inventory[x][idx]["item"] = newName;
-							if (newEdate != "") inventory[x][idx]["edate"] = newEdate;
-							if (newType != "" && newType != type) {
-								var store = inventory[x][idx];
-								inventory[x].splice(idx, 1);
-								inventory[newType].push(store);
-								type = newType;
-							}
-
-							break;
-
+							type = x;
 						}
 					}
 				}
-				console.log(inventory);
+				console.log(type);
 
-				localStorage.setItem("inventory", JSON.stringify(inventory));
+				document.getElementById("name").placeholder = name;
+				document.getElementById("edate").placeholder = edate;
+				document.getElementById("type").placeholder = type;
 
-			}
-		</script>
+				function myFunction() {
+
+					var newName, newEdate, newType;
+
+					// Get the value of the input fields
+					newName = document.getElementById("name").value;
+					newEdate = document.getElementById("edate").value;
+					newType = document.getElementById("type").value;
+
+					console.log(inventory);
+					// Change the original values
+					var x, idx;
+					for (x in inventory) {
+						console.log(inventory[x].length);
+						for (idx = 0; idx < inventory[x].length; idx++) {
+							if (inventory[x][idx]["UID"] == ID) {
+								console.log(inventory[x][idx]);
+								if (newName != "") inventory[x][idx]["item"] = newName;
+								if (newEdate != "") inventory[x][idx]["edate"] = newEdate;
+								if (newType != "" && newType != type) {
+									var store = inventory[x][idx];
+									inventory[x].splice(idx, 1);
+									inventory[newType].push(store);
+									type = newType;
+								}
+
+								break;
+
+							}
+						}
+					}
+					console.log(inventory);
+
+					localStorage.setItem("inventory", JSON.stringify(inventory));
+
+				}
+			</script>
+		</div>
 	</div>
 </body>
 
