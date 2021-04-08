@@ -32,9 +32,11 @@ table, th, td {
 /* buttons */
 button {
     font-size: 18px;
+    font-family: 'Raleway', Sans-Serif;
 }
 
 .btn {
+    font-family: 'Raleway', Sans-Serif;
     width: 100%;
     border: none;
     outline: none;
