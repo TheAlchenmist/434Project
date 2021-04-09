@@ -1,0 +1,55 @@
+<html>
+	<body>
+
+	<h2>Add Item Page</h2>
+
+	<p>Name</p>
+	<input id="name">
+
+	<p>Expiration Date</p>
+	<input id = "edate">
+
+	<p>Type (MAKE THESE RADIO BUTTONS)</p>
+
+	<input id = "type">
+	<br></br>
+	<button type="button" onclick="myFunction()">Submit</button>
+
+	<div id = "debug"></div>
+
+<script>
+
+var inventory = JSON.parse(localStorage.getItem("inventory"));
+
+function myFunction() {
+
+	var newName, newEdate, newType;
+
+  	// Get the value of the input fields
+	newName = document.getElementById("name").value;
+	newEdate = document.getElementById("edate").value;
+	newType = document.getElementById("type").value;
+
+	console.log(inventory);
+
+	if (newName == "" || newEdate == "" || newType == ""){
+		window.alert("INVALID INPUT");
+	} else {
+		var item = {};
+		item["item"] = newName;
+		item["edate"] = newEdate;
+		var newUID = inventory["UID"];
+		newUID = Number(newUID) + 1;
+		item["UID"] = ("000000" + newUID).slice(-6);
+		inventory[newType].push(item);
+		inventory["UID"] = item["UID"];
+	}
+	console.log(inventory);
+
+	localStorage.setItem("inventory",JSON.stringify(inventory));
+
+}
+</script>
+
+	</body>
+</html> 
