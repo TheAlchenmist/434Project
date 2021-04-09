@@ -1,49 +1,55 @@
 <html>
 
 <head>
+    <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="home-styles.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway:300,400" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
     <link rel="stylesheet" href="../hamburger-menu-styles.css">
+    <style>
+        h1.head {
+            text-align: center;
+            font-size: 60px;
+            color: white;
+        }
+    </style>
 </head>
 
 <body>
     <div class="app-page">
         <!-- hamburger menu -->
-		<div id="menuToggle">
-			<input type="checkbox" />
+        <div id="menuToggle">
+            <input type="checkbox" />
 
-			<span></span>
-			<span></span>
-			<span></span>
+            <span></span>
+            <span></span>
+            <span></span>
 
-			<ul id="menu">
-				<h1>
-					<a href="home.html">
-						iFridge
-					</a>
-				</h1>
-				<a href="../inventory/inventory.html">
-					<li>Inventory</li>
-				</a>
-				<a href="#">
-					<li>Shopping List</li>
-				</a>
-				<a href="../recipe-finder/recipe-home.html">
-					<li>Recipe Finder</li>
-				</a>
-				<a href="../settings/settings.html">
-					<li>Settings</li>
-				</a>
-			</ul>
-		</div>
+            <ul id="menu">
+                <h1 class="head">
+                    <a href="home.html">
+                        iFridge
+                    </a>
+                </h1>
+                <a href="../inventory/inventory.html">
+                    <li>Inventory</li>
+                </a>
+                <a href="../shopping-list/shopping-list.html">
+                    <li>Shopping List</li>
+                </a>
+                <a href="../recipe-finder/recipe-home.html">
+                    <li>Recipe Finder</li>
+                </a>
+                <a href="../settings/settings.html">
+                    <li>Settings</li>
+                </a>
+            </ul>
+        </div>
 
         <div class="header">
-            <h2 class="h2">
-                Golub's Fridge Home
-            </h2>
+            <h1 class="head">Golub's Fridge Home</h1>
         </div>
 
         <div class="notifications">
@@ -71,10 +77,13 @@
     <div class="social-menu">
         <ul>
             <li><a href="../inventory/inventory.html"><img src="../Images/inventory-fridge.png"></i></a></li>
-            <li><a href="../recipe-finder/recipe-home.html"><img src="../Images/recipe-finder-book.png"><i class="fa fa-recipes"></i></a></li>
-            <li><a href="../shopping-list/shoppinglist.html"><img src="../Images/shopping-cart.png"><i class="fa fa-shopping-cart"></i></a></li>
-            <li><a href="#"><img src="../Images/calendar.png"><i class="fa fa-calendar"></i></a></li>
-            <li><a href="../settings/settings.html"><img src="../Images/settings-cogwheel.png"><i class="fa fa-settings"></i></a></li>
+            <li><a href="../recipe-finder/recipe-home.html"><img src="../Images/recipe-finder-book.png"><i
+                        class="fa fa-recipes"></i></a></li>
+            <li><a href="../shopping-list/shopping-list.html"><img src="../Images/shopping-cart.png"><i
+                        class="fa fa-shopping-cart"></i></a></li>
+            <!-- <li><a href="#"><img src="../Images/calendar.png"><i class="fa fa-calendar"></i></a></li> -->
+            <li><a href="../settings/settings.html"><img src="../Images/settings-cogwheel.png"><i
+                        class="fa fa-settings"></i></a></li>
         </ul>
     </div>
 

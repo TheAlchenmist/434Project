@@ -3,7 +3,8 @@
 
 <head>
 	<link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway:300,400">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway:300,400">
+	<link rel="stylesheet" href="../hamburger-menu-styles.css">
 
 	<style>
 		body {
@@ -14,8 +15,39 @@
 
 <body>
 	<div class="app-page">
-		<h1>ABOUT</h1>
-		Created by Joshua Chen, Shivanee Arun, Yashashri Pendse, and Kenton Wong
+		<!-- hamburger menu -->
+		<div id="menuToggle">
+			<input type="checkbox" />
+
+			<span></span>
+			<span></span>
+			<span></span>
+
+			<ul id="menu">
+				<h1>
+					<a href="../home/home.html">
+						iFridge
+					</a>
+				</h1>
+				<a href="../inventory/inventory.html">
+					<li>Inventory</li>
+				</a>
+				<a href="../shopping-list/shopping-list.html">
+					<li>Shopping List</li>
+				</a>
+				<a href="../recipe-finder/recipe-home.html">
+					<li>Recipe Finder</li>
+				</a>
+				<a href="settings.html">
+					<li>Settings</li>
+				</a>
+			</ul>
+		</div>
+
+		<div>
+			<h1>About</h1>
+			Created by Joshua Chen, Shivanee Arun, Yashashri Pendse, and Kenton Wong!
+		</div>
 	</div>
 </body>
 

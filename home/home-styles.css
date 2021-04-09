@@ -1,30 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Cabin|Roboto:400,700|Roboto+Condensed:400,700");
 
-body{
-    color: white;
-}
-
-.app-page{
-    background-color: #DCBE61;
-    height: 768px;
-    width: 1024px;
-    border: 20px solid gray
-;
-}
-
-.h2{
-    text-align: center;
-    font-family: 'Raleway', Sans-Serif;
-    font-size: 44px;
-}
-
 .notifications {
     position: relative;
-    top: 13%;
-    left: 14%;
+    top: 10%;
+    left: 16%;
     width: 200px;
     margin-left: -100px;
-
 }
 
 .immediate i {
@@ -151,8 +132,8 @@ body{
     position: absolute;
     width: 400px;
     height: 180px;
-    left: 550px;
-    top: -100px;
+    left: 525px;
+    top: -80px;
     margin: 300px auto;
     background-color: #fcfdfd;
     border-radius: 10px;

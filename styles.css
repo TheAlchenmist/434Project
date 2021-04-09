@@ -13,14 +13,17 @@ body {
     * GREEN           #78866b
     */
 
+    margin: 0;
     background-color: white;
     font-family: 'Raleway', Sans-Serif;
     font-size: 18px;
+    color: white;
 }
 
 h1 {
     text-align: center;
     font-size: 60px;
+    color: white;
 }
 
 h2 {

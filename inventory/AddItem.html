@@ -1,55 +1,100 @@
 <html>
-	<body>
 
-	<h2>Add Item Page</h2>
+<head>
+	<link rel="stylesheet" href="../styles.css">
+	<link rel="stylesheet" href="../hamburger-menu-styles.css">
+	<style>
+		body {
+			text-align: center;
+		}
+	</style>
+</head>
 
-	<p>Name</p>
-	<input id="name">
+<body>
+	<div class="app-page">
 
-	<p>Expiration Date</p>
-	<input id = "edate">
+		<!-- hamburger menu -->
+		<div id="menuToggle">
+			<input type="checkbox" />
 
-	<p>Type (MAKE THESE RADIO BUTTONS)</p>
+			<span></span>
+			<span></span>
+			<span></span>
 
-	<input id = "type">
-	<br></br>
-	<button type="button" onclick="myFunction()">Submit</button>
+			<ul id="menu" class="burger">
+				<h1>
+					<a href="../home/home.html">
+						iFridge
+					</a>
+				</h1>
+				<a href="../inventory/inventory.html">
+					<li>Inventory</li>
+				</a>
+				<a href="shopping-list.html">
+					<li>Shopping List</li>
+				</a>
+				<a href="../recipe-finder/recipe-home.html">
+					<li>Recipe Finder</li>
+				</a>
+				<a href="../settings/settings.html">
+					<li>Settings</li>
+				</a>
+			</ul>
+		</div>
 
-	<div id = "debug"></div>
+		<div>
+			<h1>Add Item</h1>
 
-<script>
+			<p>Name</p>
+			<input id="name">
 
-var inventory = JSON.parse(localStorage.getItem("inventory"));
+			<p>Expiration Date</p>
+			<input id="edate">
 
-function myFunction() {
+			<p>Type (MAKE THESE RADIO BUTTONS)</p>
 
-	var newName, newEdate, newType;
+			<input id="type">
+			<br></br>
 
-  	// Get the value of the input fields
-	newName = document.getElementById("name").value;
-	newEdate = document.getElementById("edate").value;
-	newType = document.getElementById("type").value;
+			<button type="button" onclick="myFunction()">Submit</button>
 
-	console.log(inventory);
+			<div id="debug"></div>
 
-	if (newName == "" || newEdate == "" || newType == ""){
-		window.alert("INVALID INPUT");
-	} else {
-		var item = {};
-		item["item"] = newName;
-		item["edate"] = newEdate;
-		var newUID = inventory["UID"];
-		newUID = Number(newUID) + 1;
-		item["UID"] = ("000000" + newUID).slice(-6);
-		inventory[newType].push(item);
-		inventory["UID"] = item["UID"];
-	}
-	console.log(inventory);
+			<script>
 
-	localStorage.setItem("inventory",JSON.stringify(inventory));
+				var inventory = JSON.parse(localStorage.getItem("inventory"));
 
-}
-</script>
+				function myFunction() {
 
-	</body>
-</html> 
+					var newName, newEdate, newType;
+
+					// Get the value of the input fields
+					newName = document.getElementById("name").value;
+					newEdate = document.getElementById("edate").value;
+					newType = document.getElementById("type").value;
+
+					console.log(inventory);
+
+					if (newName == "" || newEdate == "" || newType == "") {
+						window.alert("INVALID INPUT");
+					} else {
+						var item = {};
+						item["item"] = newName;
+						item["edate"] = newEdate;
+						var newUID = inventory["UID"];
+						newUID = Number(newUID) + 1;
+						item["UID"] = ("000000" + newUID).slice(-6);
+						inventory[newType].push(item);
+						inventory["UID"] = item["UID"];
+					}
+					console.log(inventory);
+
+					localStorage.setItem("inventory", JSON.stringify(inventory));
+
+				}
+			</script>
+		</div>
+	</div>
+</body>
+
+</html>
