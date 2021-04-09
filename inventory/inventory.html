@@ -1,42 +1,10 @@
 <html>
+	<head>
+		<link rel="stylesheet" href="inventory-styles.css">
+	</head>
 
-<head>
-	<link rel="stylesheet" href="../styles.css">
-	<link rel="stylesheet" href="inventory-styles.css">
-	<link rel="stylesheet" href="../hamburger-menu-styles.css">
-</head>
-
-<body>
-	<div class="app-page">
-		<!-- hamburger menu -->
-		<div id="menuToggle">
-			<input type="checkbox" />
-
-			<span></span>
-			<span></span>
-			<span></span>
-
-			<ul id="menu">
-				<h1>
-					<a href="../home/home.html">
-						iFridge
-					</a>
-				</h1>
-				<a href="inventory.html">
-					<li>Inventory</li>
-				</a>
-				<a href="#">
-					<li>Shopping List</li>
-				</a>
-				<a href="../recipe-finder/recipe-home.html">
-					<li>Recipe Finder</li>
-				</a>
-				<a href="../settings/settings.html">
-					<li>Settings</li>
-				</a>
-			</ul>
-		</div>
-		<div id="debug"></div>
+	<body>
+		<div id = "debug"></div>
 		<!-- Control buttons -->
 		<div id="myBtnContainer">
 			<button class="btn active" onclick="filterSelection('all')"> Show all</button>
@@ -49,7 +17,7 @@
 			<button class="btn" onclick="filterSelection('misc')"> Miscellaneous</button>
 
 		</div>
-		<div id="filtering"></div>
+		<div id = "filtering"></div>
 
 		<!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
 		<!--	<div class="container">
@@ -67,122 +35,125 @@
 			<div class="filterDiv misc">Butter</div>
 			<div class="filterDiv produce">Avacado</div>
 		</div>*/ -->
-	</div>
-</body>
+		<button onclick = "addItem()">ADD ITEM</button>
+	</body>
 <script>
 	var check = localStorage.getItem("inventory");
 	console.log(check);
 	var inventory;
 	if (check == null || check == undefined) {
 		console.log("RUN");
-		inventory = {
-			"produce": [
-				{ "item": "test", "edate": "XX/XX", "UID": "000000" },
-				{ "item": "testo", "edate": "XX/XX", "UID": "000001" },
-				{ "item": "xxxxxx", "edate": "XX/XX", "UID": "000002" }], "meats": [
-					{ "item": "xxxxxx", "edate": "XX/XX", "UID": "000003" },
-					{ "item": "xxxxxx", "edate": "XX/XX", "UID": "000004" },
-					{ "item": "xxxxxx", "edate": "XX/XX", "UID": "000005" }], "frozen": [
-						{ "item": "xxxxxx", "edate": "XX/XX", "UID": "000006" },
-						{ "item": "xxxxxx", "edate": "XX/XX", "UID": "000007" },
-						{ "item": "xxxxxx", "edate": "XX/XX", "UID": "000008" }], "drinks": [
-							{ "item": "xxxxxx", "edate": "XX/XX", "UID": "000009" },
-							{ "item": "xxxxxx", "edate": "XX/XX", "UID": "000010" },
-							{ "item": "xxxxxx", "edate": "XX/XX", "UID": "000011" }], "condiments": [
-								{ "item": "xxxxxx", "edate": "XX/XX", "UID": "000012" },
-								{ "item": "xxxxxx", "edate": "XX/XX", "UID": "000013" },
-								{ "item": "xxxxxx", "edate": "XX/XX", "UID": "000014" }], "beauty": [
-									{ "item": "xxxxxx", "edate": "XX/XX", "UID": "000015" },
-									{ "item": "xxxxxx", "edate": "XX/XX", "UID": "000016" },
-									{ "item": "xxxxxx", "edate": "XX/XX", "UID": "000017" }], "miscellaneous": [
-										{ "item": "xxxxxx", "edate": "XX/XX", "UID": "000018" },
-										{ "item": "xxxxxx", "edate": "XX/XX", "UID": "000019" },
-										{ "item": "xxxxxx", "edate": "XX/XX", "UID": "000020" }]
-		};
+		inventory = { "produce" : [ 
+		{ "item": "test", "edate":"XX/XX", "UID":"000000"}, 
+		{ "item": "testo", "edate":"XX/XX", "UID":"000001" }, 
+		{ "item": "xxxxxx", "edate":"XX/XX", "UID":"000002" }], "meats" : [ 
+		{ "item": "xxxxxx", "edate":"XX/XX", "UID":"000003" }, 
+		{ "item": "xxxxxx", "edate":"XX/XX", "UID":"000004" }, 
+		{ "item": "xxxxxx", "edate":"XX/XX", "UID":"000005" }], "frozen" : [ 
+		{ "item": "xxxxxx", "edate":"XX/XX", "UID":"000006" }, 
+		{ "item": "xxxxxx", "edate":"XX/XX", "UID":"000007" }, 
+		{ "item": "xxxxxx", "edate":"XX/XX", "UID":"000008" }], "drinks" : [ 
+		{ "item": "xxxxxx", "edate":"XX/XX", "UID":"000009" }, 
+		{ "item": "xxxxxx", "edate":"XX/XX", "UID":"000010" }, 
+		{ "item": "xxxxxx", "edate":"XX/XX", "UID":"000011" }], "condiments" : [ 
+		{ "item": "xxxxxx", "edate":"XX/XX", "UID":"000012" }, 
+		{ "item": "xxxxxx", "edate":"XX/XX", "UID":"000013" }, 
+		{ "item": "xxxxxx", "edate":"XX/XX", "UID":"000014" }], "beauty" : [ 
+		{ "item": "xxxxxx", "edate":"XX/XX", "UID":"000015" }, 
+		{ "item": "xxxxxx", "edate":"XX/XX", "UID":"000016" }, 
+		{ "item": "xxxxxx", "edate":"XX/XX", "UID":"000017" }], "miscellaneous" : [ 
+		{ "item": "xxxxxx", "edate":"XX/XX", "UID":"000018" }, 
+		{ "item": "xxxxxx", "edate":"XX/XX", "UID":"000019" }, 
+		{ "item": "xxxxxx", "edate":"XX/XX", "UID":"000020" }], "UID" : "000020"};
 	} else {
 		inventory = JSON.parse(check);
 	}
+localStorage.setItem("inventory", JSON.stringify(inventory));
+var idx;
+for (x in inventory){
+	if(x != "UID"){
+	for (idx = 0; idx < inventory[x].length; idx++){
+		var food = document.createElement("div");
+		food.className = "filterDiv" + " " + x;
+		food.UID = inventory[x][idx]["UID"];
+		food.item = inventory[x][idx]["item"];
+		var text = document.createTextNode(food.item);
+		food.appendChild(text);
+		food.edate = inventory[x][idx]["edate"];
+		document.getElementById("filtering").appendChild(food);
+	}
+	}
+}
+console.log(inventory.produce[1]["item"]);
+
+filterSelection("all");
+
+
+
+function filterSelection(c) {
+	var x, i;
+	x = document.getElementsByClassName("filterDiv");
+	if (c == "all") c = "";
+	// Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+	for (i = 0; i < x.length; i++) {
+		removeClass(x[i], "show");
+		if (x[i].className.indexOf(c) > -1) addClass(x[i], "show");
+	}
+}
+
+// Show filtered elements
+function addClass(element, name) {
+	var i, arr1, arr2;
+	arr1 = element.className.split(" ");
+	arr2 = name.split(" ");
+	for (i = 0; i < arr2.length; i++) {
+		if (arr1.indexOf(arr2[i]) == -1) {
+			element.className += " " + arr2[i];
+		}
+	}
+}
+
+// Hide elements that are not selected
+function removeClass(element, name) {
+	var i, arr1, arr2;
+	arr1 = element.className.split(" ");
+	arr2 = name.split(" ");
+	for (i = 0; i < arr2.length; i++) {
+		while (arr1.indexOf(arr2[i]) > -1) {
+			arr1.splice(arr1.indexOf(arr2[i]), 1);
+		}
+	}
+	element.className = arr1.join(" ");
+}
+function addItem(){
 	localStorage.setItem("inventory", JSON.stringify(inventory));
-	var idx;
-	for (x in inventory) {
-		for (idx = 0; idx < inventory[x].length; idx++) {
-			var food = document.createElement("div");
-			food.className = "filterDiv" + " " + x;
-			food.UID = inventory[x][idx]["UID"];
-			food.item = inventory[x][idx]["item"];
-			var text = document.createTextNode(food.item);
-			food.appendChild(text);
-			food.edate = inventory[x][idx]["edate"];
-			document.getElementById("filtering").appendChild(food);
-		}
-	}
-	console.log(inventory.produce[1]["item"]);
+	window.location.href = "AddItem.html";
+}
 
-	filterSelection("all");
+// Add active class to the current control button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+	btns[i].addEventListener("click", function(x) {
+		var some = document.getElementById("myBtnContainer");
+		var current = some.getElementsByClassName("active");
+		current[0].className = current[0].className.replace(" active", "");
+		x.currentTarget.className += " active";
+	});
+}
 
-
-
-	function filterSelection(c) {
-		var x, i;
-		x = document.getElementsByClassName("filterDiv");
-		if (c == "all") c = "";
-		// Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
-		for (i = 0; i < x.length; i++) {
-			removeClass(x[i], "show");
-			if (x[i].className.indexOf(c) > -1) addClass(x[i], "show");
-		}
-	}
-
-	// Show filtered elements
-	function addClass(element, name) {
-		var i, arr1, arr2;
-		arr1 = element.className.split(" ");
-		arr2 = name.split(" ");
-		for (i = 0; i < arr2.length; i++) {
-			if (arr1.indexOf(arr2[i]) == -1) {
-				element.className += " " + arr2[i];
-			}
-		}
-	}
-
-	// Hide elements that are not selected
-	function removeClass(element, name) {
-		var i, arr1, arr2;
-		arr1 = element.className.split(" ");
-		arr2 = name.split(" ");
-		for (i = 0; i < arr2.length; i++) {
-			while (arr1.indexOf(arr2[i]) > -1) {
-				arr1.splice(arr1.indexOf(arr2[i]), 1);
-			}
-		}
-		element.className = arr1.join(" ");
-	}
-
-	// Add active class to the current control button (highlight it)
-	var btnContainer = document.getElementById("myBtnContainer");
-	var btns = btnContainer.getElementsByClassName("btn");
-	for (var i = 0; i < btns.length; i++) {
-		btns[i].addEventListener("click", function (x) {
-			var some = document.getElementById("myBtnContainer");
-			var current = some.getElementsByClassName("active");
-			current[0].className = current[0].className.replace(" active", "");
-			x.currentTarget.className += " active";
-		});
-	}
-
-	var filterContainer = document.getElementById("filtering");
-	var filtering = filterContainer.getElementsByClassName("filterdiv");
-	for (var i = 0; i < filtering.length; i++) {
-		filtering[i].addEventListener("click", function (x) {
-			var some = document.getElementById("filtering");
-			var current = some.getElementsByClassName("active");
-			if (current != undefined && current.length != 0) current[0].className = current[0].className.replace(" active", "");
-			x.currentTarget.className += " active";
-			localStorage.setItem("edit", JSON.stringify(x.currentTarget));
-			console.log(localStorage.getItem("edit"));
-			window.location.href = "EditItem.html";
-		});
-	}
+var filterContainer = document.getElementById("filtering");
+var filtering = filterContainer.getElementsByClassName("filterdiv");
+for (var i = 0; i < filtering.length; i++) {
+	filtering[i].addEventListener("click", function(x) {
+		var some = document.getElementById("filtering");
+		var current = some.getElementsByClassName("active");
+		if(current != undefined && current.length != 0) current[0].className = current[0].className.replace(" active", "");
+		x.currentTarget.className += " active";
+		localStorage.setItem("edit", JSON.stringify(x.currentTarget));
+		console.log(localStorage.getItem("edit"));
+		window.location.href = "EditItem.html";
+	});
+}
 </script>
-
 </html>
