@@ -70,7 +70,6 @@
 }
 
 .recipe-cards{
-    /* margin: 30px; */
     padding-top: 2%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(10px, 240px));
