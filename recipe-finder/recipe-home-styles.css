@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Cabin|Roboto:400,700|Roboto+Condensed:400,700");
 
+.diet{
+    font-family: 'Raleway', Sans-Serif;
+}
 .search-bar{
     position: absolute;
     top: 20%;
@@ -70,6 +73,7 @@
 }
 
 .recipe-cards{
+    font-family: 'Raleway', Sans-Serif;
     padding-top: 2%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(10px, 240px));

@@ -3,7 +3,7 @@
     background-color: #DCBE61;
     height: 768px;
     width: 1024px;
-    border: 20px solid gray;
+    border: 15px solid black;
 }
 
 body {
@@ -15,17 +15,20 @@ body {
 }
 
 h1.head {
+    font-family: 'Raleway', Sans-Serif;
     text-align: center;
     font-size: 60px;
     color: white;
 }
 
 h2 {
+    font-family: 'Raleway', Sans-Serif;
     text-align: center;
     font-size: 44px;
 }
 
 h3 {
+    font-family: 'Raleway', Sans-Serif;
     text-align: center;
     font-size: 28px;
 }
