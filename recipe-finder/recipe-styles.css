@@ -4,6 +4,10 @@
 
 /* add borders to table */
 
+html{
+    overflow: scroll;
+}
+
 table, th, td {
     border: 1px solid black;
 }
