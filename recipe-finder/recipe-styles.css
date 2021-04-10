@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Cabin|Roboto:400,700|Roboto+Condensed:400,700");
+
 /* table of ingredients */
 
 /* add borders to table */
@@ -6,8 +8,14 @@ table, th, td {
     border: 1px solid black;
 }
 
+/* header font */
+head{
+    font-family: 'Raleway', Sans-Serif;
+}
+
 /* align columns for table */
 #mytable {
+    font-family: 'Raleway', Sans-Serif;
     margin: 0 auto;
 }
 
