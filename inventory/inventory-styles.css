@@ -1,7 +1,19 @@
 @import url("https://fonts.googleapis.com/css?family=Cabin|Roboto:400,700|Roboto+Condensed:400,700");
 
-.body{
-  color:white;
+.btn-add {
+  background-color: #2a751b;
+  border: none;
+  outline: none;
+  color: white
+}
+
+.btn-add:hover {
+  background-color: #3a852b;
+}
+
+.ctrl-btns {
+  display: flex;
+  justify-content: center;
 }
 
 .container {
@@ -11,7 +23,8 @@
 .filterDiv {
   font-family: 'Raleway', Sans-Serif;
   float: left;
-  background-color: #2196F3;
+  /* background-color: #2196F3; */
+  background-color: #ecb91d;
   color: #ffffff;
   width: 100px;
   line-height: 100px;
@@ -27,7 +40,8 @@
 }
 
 .filterDiv:hover {
-  background-color: #ddd;
+  /* background-color: #31a6ff; */
+  background-color: #fcc92d;
 }
 /* The "show" class is added to the filtered elements */
 .show {
