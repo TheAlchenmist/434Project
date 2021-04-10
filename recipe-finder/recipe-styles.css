@@ -41,12 +41,12 @@ button {
     border: none;
     outline: none;
     padding: 12px 16px;
-    background-color: #dcbe61;
+    background-color: #2a751b;
     cursor: pointer;
 }
 
 .btn:hover {
-    background-color: #ecce71;
+    background-color: #3a852b;
 }
 
 /* ordered list of steps */
