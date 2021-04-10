@@ -16,7 +16,7 @@ span {
 
 #menuToggle a {
     text-decoration: none;
-    color: #232323;
+    color: white;
 
     transition: color 0.3s ease;
 }
@@ -52,7 +52,7 @@ span {
     margin-bottom: 5px;
     position: relative;
 
-    background: black;
+    background: white;
     border-radius: 3px;
 
     z-index: 1;
@@ -76,7 +76,7 @@ span {
 #menuToggle input:checked~span {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
-    background: #232323;
+    background: white;
 }
 
 /* But let's hide the middle one */
