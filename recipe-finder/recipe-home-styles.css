@@ -90,6 +90,10 @@
     padding-left: 5%;
 }
 
+.sorting h1{
+    font-family: 'Raleway', Sans-Serif;
+}
+
 /* The container */
 .container {
     display: block;
