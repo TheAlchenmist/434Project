@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Cabin|Roboto:400,700|Roboto+Condensed:400,700");
 
 .btn-add {
-  background-color: #2a751b;
+  background-color: #ecb91d;
   border: none;
   outline: none;
   color: white
 }
 
 .btn-add:hover {
-  background-color: #3a852b;
+  background-color: #cf9b00;
   cursor: pointer;
 }
 
@@ -42,7 +42,7 @@
 
 .filterDiv:hover {
   /* background-color: #31a6ff; */
-  background-color: #fcc92d;
+  background-color: #cf9b00;
 }
 /* The "show" class is added to the filtered elements */
 .show {
@@ -61,11 +61,11 @@
 
 /* Add a light grey background on mouse-over */
 .btn:hover {
-  background-color: #ddd;
+  background-color: #ecb91d;
 }
 
 /* Add a dark background to the active button */
 .btn.active {
-  background-color: #666;
+  background-color: #cf9b00;
   color: white;
 }
