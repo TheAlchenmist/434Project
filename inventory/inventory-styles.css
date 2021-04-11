@@ -9,6 +9,7 @@
 
 .btn-add:hover {
   background-color: #3a852b;
+  cursor: pointer;
 }
 
 .ctrl-btns {
