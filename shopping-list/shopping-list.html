@@ -181,12 +181,13 @@
             <form action="newElement(this.value)">
                 <label for="categories">Choose a category:</label>
                 <select name="categories" id="categories">
-                    <option value="fruit">Fruit</option>
-                    <option value="vegetable">Vegetable</option>
-                    <option value="dairy">Dairy</option>
-                    <option value="grain">Grain</option>
+                    <option value="fresh produce">Fresh Produce</option>
                     <option value="protein">Protein</option>
-                    <option value="beverage">Beverage</option>
+                    <option value="dairy">Dairy</option>
+                    <option value="drink">Drinks</option>
+                    <option value="frozen foods">Frozen Food</option>
+                    <option value="beauty/medicine">Beauty/Medicine</option>
+                    <option value="miscellaneous">Miscellaneous</option>
                 </select>
                 <br><br>
             </form>
@@ -194,23 +195,26 @@
         </div>
 
         <div>
-            <h2 style="margin:5px; color : 	#eee; font-family: 'Raleway', Sans-Serif;">Fruit</h2>
-            <ul id="fruitUL" class="shoppinglist"></ul>
-
-            <h2 style="margin:5px; color : 	#eee; font-family: 'Raleway', Sans-Serif;">Vegetable</h2>
-            <ul id="vegetableUL" class="shoppinglist"></ul>
-
-            <h2 style="margin:5px; color : 	#eee; font-family: 'Raleway', Sans-Serif;">Dairy</h2>
-            <ul id="dairyUL" class="shoppinglist"></ul>
-
-            <h2 style="margin:5px; color : 	#eee; font-family: 'Raleway', Sans-Serif;">Grain</h2>
-            <ul id="grainUL" class="shoppinglist"></ul>
+            <h2 style="margin:5px; color : 	#eee; font-family: 'Raleway', Sans-Serif;">Fresh Produce</h2>
+            <ul id="frshproduceUL" class="shoppinglist"></ul>
 
             <h2 style="margin:5px; color : 	#eee; font-family: 'Raleway', Sans-Serif;">Protein</h2>
             <ul id="proteinUL" class="shoppinglist"></ul>
 
-            <h2 style="margin:5px; color : 	#eee; font-family: 'Raleway', Sans-Serif;">Beverage</h2>
+            <h2 style="margin:5px; color : 	#eee; font-family: 'Raleway', Sans-Serif;">Dairy</h2>
+            <ul id="dairyUL" class="shoppinglist"></ul>
+
+            <h2 style="margin:5px; color : 	#eee; font-family: 'Raleway', Sans-Serif;">Drinks</h2>
             <ul id="drinkUL" class="shoppinglist"></ul>
+
+            <h2 style="margin:5px; color : 	#eee; font-family: 'Raleway', Sans-Serif;">Frozen Food</h2>
+            <ul id="frozenfoodsUL" class="shoppinglist"></ul>
+
+            <h2 style="margin:5px; color : 	#eee; font-family: 'Raleway', Sans-Serif;">Beauty/Medicine</h2>
+            <ul id="beauty/medicineUL" class="shoppinglist"></ul>
+
+            <h2 style="margin:5px; color : 	#eee; font-family: 'Raleway', Sans-Serif;">Miscellaneous</h2>
+            <ul id="miscellaneousUL" class="shoppinglist"></ul>
         </div>
 
         <script>
@@ -258,16 +262,18 @@
                     alert("You must write something!");
                 } else if (val == "dairy") {
                     document.getElementById("dairyUL").appendChild(li);
-                } else if (val == "fruit") {
-                    document.getElementById("fruitUL").appendChild(li);
-                } else if (val == "vegetable") {
-                    document.getElementById("vegetableUL").appendChild(li);
-                } else if (val == "beverage") {
+                } else if (val == "fresh produce") {
+                    document.getElementById("freshproduceUL").appendChild(li);
+                } else if (val == "beauty/medicine") {
+                    document.getElementById("beauty/medicine").appendChild(li);
+                } else if (val == "drink") {
                     document.getElementById("drinkUL").appendChild(li);
                 } else if (val == "protein") {
                     document.getElementById("proteinUL").appendChild(li);
-                } else if (val == "grain") {
-                    document.getElementById("grainUL").appendChild(li);
+                } else if (val == "miscellaneous") {
+                    document.getElementById("miscellaneousUL").appendChild(li);
+                } else if (val == "frozen foods") {
+                    document.getElementById("frozenfoodsUL").appendChild(li);
                 }
                 document.getElementById("myInput").value = "";
 
