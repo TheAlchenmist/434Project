@@ -29,6 +29,14 @@ head{
     font-family: 'Raleway', Sans-Serif;
 }
 
+.ingredients h3{
+    font-family: 'Raleway', Sans-Serif;
+}
+
+.steps h3{
+    font-family: 'Raleway', Sans-Serif;
+}
+
 /* align columns for table */
 #mytable {
     font-family: 'Raleway', Sans-Serif;
