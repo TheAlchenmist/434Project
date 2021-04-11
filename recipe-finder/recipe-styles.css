@@ -65,12 +65,12 @@ button {
     border: none;
     outline: none;
     padding: 12px 16px;
-    background-color: #2a751b;
+    background-color: #cf9b00;
     cursor: pointer;
 }
 
 .btn:hover {
-    background-color: #3a852b;
+    background-color: #ecb91d;
 }
 
 /* ordered list of steps */
