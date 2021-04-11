@@ -1,6 +1,11 @@
 .app-page{
-    /* background-color: #dcbe61; */
-    background-color: #DCBE61;
+    /*
+    * COLORS
+    * bg green      #0c6e3d
+    * light green   #9dedc5
+    * dark green    #094f2c
+    */
+    background-color: #0c6e3d;
     height: 768px;
     width: 1024px;
     border: 15px solid black;
