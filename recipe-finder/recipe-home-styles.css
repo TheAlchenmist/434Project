@@ -65,7 +65,7 @@
     display:none;
 }
 .button:hover {
-    background-color: #4caf50;
+    background-color: #cf9b00;
 }
 
 .show {
@@ -132,12 +132,12 @@
 
 /* On mouse-over, add a grey background color */
 .container:hover input ~ .checkmark {
-    background-color: #ccc;
+    background-color: #ecb91d;
 }
 
 /* When the checkbox is checked, add a green background */
 .container input:checked ~ .checkmark {
-    background-color: green;
+    background-color: #cf9b00;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
