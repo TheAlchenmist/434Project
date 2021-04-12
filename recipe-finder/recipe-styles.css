@@ -63,7 +63,6 @@ head{
 
 /* buttons */
 button {
-    font-size: 18px;
     font-family: 'Raleway', Sans-Serif;
 }
 
@@ -84,7 +83,7 @@ button {
 
 /* ordered list of steps */
 ol {
-    /* items are centered, maybe wanna change later? */
+    font-size: 18;
     text-align: center;
     list-style-position: inside;
     transform: translateX(-20px);
