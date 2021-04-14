@@ -234,8 +234,12 @@
             var i;
             for (i = 0; i < close.length; i++) {
                 close[i].onclick = function () {
+		    console.log(shoppingList);
+		    shoppingList.delete(this.textContent);
                     var div = this.parentElement;
                     div.style.display = "none";
+		    localStorage.setItem("shoppingList",JSON.stringify(shoppingList));
+
                 }
             }
 
@@ -283,13 +287,75 @@
                 span.appendChild(txt);
                 li.appendChild(span);
 
+		console.log(shoppingList);
                 for (i = 0; i < close.length; i++) {
                     close[i].onclick = function () {
+		    shoppingList.delete(this.textContent);
+
+			console.log(shoppingList);
                         var div = this.parentElement;
                         div.style.display = "none";
+			localStorage.setItem("shoppingList",JSON.stringify(shoppingList));
+
                     }
                 }
+		shoppingList[inputValue] = val;
+		localStorage.setItem("shoppingList",JSON.stringify(shoppingList));
             }
+var check = localStorage.getItem("shoppingList");
+console.log(check);
+var shoppingList;
+if (check == null || check == undefined){
+	console.log("RUN");
+	shoppingList = {
+		"Apples":"fresh produce",
+		"Caprisun":"drink",
+		"Pretzels": "frozen foods",
+		"Beef": "protein"};
+}else {
+	shoppingList = JSON.parse(check);
+}
+localStorage.setItem("shoppingList",JSON.stringify(shoppingList));
+for (x in shoppingList) {
+	var val = shoppingList[x];
+	var li = document.createElement("li");
+	var inputValue = x;
+	var t = document.createTextNode(inputValue);
+	li.appendChild(t);
+	if (inputValue === '') {
+		alert("You must write something!");
+	} else if (val == "dairy") {
+		document.getElementById("dairyUL").appendChild(li);
+	} else if (val == "fresh produce") {
+		document.getElementById("freshproduceUL").appendChild(li);
+	} else if (val == "beauty/medicine") {
+		document.getElementById("beauty/medicine").appendChild(li);
+	} else if (val == "drink") {
+		document.getElementById("drinkUL").appendChild(li);
+	} else if (val == "protein") {
+		document.getElementById("proteinUL").appendChild(li);
+	} else if (val == "miscellaneous") {
+		document.getElementById("miscellaneousUL").appendChild(li);
+	} else if (val == "frozen foods") {
+		document.getElementById("frozenfoodsUL").appendChild(li);
+	}
+	document.getElementById("myInput").value = "";
+
+	var span = document.createElement("SPAN");
+	var txt = document.createTextNode("\u00D7");
+	span.className = "close";
+	span.appendChild(txt);
+	li.appendChild(span);
+}
+
+for (i = 0; i < close.length; i++) {
+	close[i].onclick = function () {
+		var div = this.parentElement;
+		div.style.display = "none";
+	}
+}
+
+
         </script>
     </div>
 </body>
