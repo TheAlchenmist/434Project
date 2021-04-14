@@ -59,7 +59,7 @@
 						<td class="center">long grain rice</td>
 						<td class="center">2 cups</td>
 						<td class="right">
-							<button class="btn" onclick="">
+							<button class="btn" onclick="addItem('longgrainrice misc')">
 								+ Add to Shopping List
 							</button>
 						</td>
@@ -68,7 +68,7 @@
 						<td class="center">coconut milk</td>
 						<td class="center">1 can (14 oz)</td>
 						<td class="right">
-							<button class="btn" onclick="">
+							<button class="btn" onclick="addItem('coconutmilk drink')">
 								+ Add to Shopping List
 							</button>
 						</td>
@@ -77,7 +77,7 @@
 						<td class="center">water</td>
 						<td class="center">1 &frac12 cup</td>
 						<td class="right">
-							<button class="btn" onclick="">
+							<button class="btn" onclick="addItem('water drink')">
 								+ Add to Shopping List
 							</button>
 						</td>
@@ -86,7 +86,7 @@
 						<td class="center">granulated sugar</td>
 						<td class="center">1 tablespoon</td>
 						<td class="right">
-							<button class="btn" onclick="">
+							<button class="btn" onclick="addItem('sugar misc')">
 								+ Add to Shopping List
 							</button>
 						</td>
@@ -95,7 +95,7 @@
 						<td class="center">kosher salt</td>
 						<td class="center">2 teaspoons</td>
 						<td class="right">
-							<button class="btn" onclick="">
+							<button class="btn" onclick="addItem('koshersalt misc')">
 								+ Add to Shopping List
 							</button>
 						</td>
@@ -122,5 +122,29 @@
 		</div>
 	</div>
 </body>
+	<script>
+var check = localStorage.getItem("shoppingList");
+console.log(check);
+var shoppingList;
+if (check == null || check == undefined){
+	console.log("RUN");
+	shoppingList = {
+		"Apples":"produce",
+		"Caprisun":"drink",
+		"Pretzels": "frozen",
+		"Beef": "protein"};
+}else {
+	shoppingList = JSON.parse(check);
+}
+localStorage.setItem("shoppingList",JSON.stringify(shoppingList));
+
+function addItem(send){
+	var arr = send.split(" ");
+	shoppingList[arr[0]] = arr[1];
+	localStorage.setItem("shoppingList", JSON.stringify(shoppingList));
+}
+
+
+	</script>
 
 </html>
