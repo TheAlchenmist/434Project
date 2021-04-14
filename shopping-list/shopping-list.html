@@ -181,13 +181,13 @@
             <form action="newElement(this.value)">
                 <label for="categories">Choose a category:</label>
                 <select name="categories" id="categories">
-                    <option value="fresh produce">Fresh Produce</option>
+                    <option value="produce">Fresh Produce</option>
                     <option value="protein">Protein</option>
                     <option value="dairy">Dairy</option>
                     <option value="drink">Drinks</option>
-                    <option value="frozen foods">Frozen Food</option>
-                    <option value="beauty/medicine">Beauty/Medicine</option>
-                    <option value="miscellaneous">Miscellaneous</option>
+                    <option value="frozen">Frozen Food</option>
+                    <option value="beauty">Beauty/Medicine</option>
+                    <option value="misc">Miscellaneous</option>
                 </select>
                 <br><br>
             </form>
@@ -266,17 +266,17 @@
                     alert("You must write something!");
                 } else if (val == "dairy") {
                     document.getElementById("dairyUL").appendChild(li);
-                } else if (val == "fresh produce") {
+                } else if (val == "produce") {
                     document.getElementById("freshproduceUL").appendChild(li);
-                } else if (val == "beauty/medicine") {
+                } else if (val == "beauty") {
                     document.getElementById("beauty/medicine").appendChild(li);
                 } else if (val == "drink") {
                     document.getElementById("drinkUL").appendChild(li);
                 } else if (val == "protein") {
                     document.getElementById("proteinUL").appendChild(li);
-                } else if (val == "miscellaneous") {
+                } else if (val == "misc") {
                     document.getElementById("miscellaneousUL").appendChild(li);
-                } else if (val == "frozen foods") {
+                } else if (val == "frozen") {
                     document.getElementById("frozenfoodsUL").appendChild(li);
                 }
                 document.getElementById("myInput").value = "";
@@ -308,9 +308,9 @@ var shoppingList;
 if (check == null || check == undefined){
 	console.log("RUN");
 	shoppingList = {
-		"Apples":"fresh produce",
+		"Apples":"produce",
 		"Caprisun":"drink",
-		"Pretzels": "frozen foods",
+		"Pretzels": "frozen",
 		"Beef": "protein"};
 }else {
 	shoppingList = JSON.parse(check);
@@ -326,17 +326,17 @@ for (x in shoppingList) {
 		alert("You must write something!");
 	} else if (val == "dairy") {
 		document.getElementById("dairyUL").appendChild(li);
-	} else if (val == "fresh produce") {
+	} else if (val == "produce") {
 		document.getElementById("freshproduceUL").appendChild(li);
-	} else if (val == "beauty/medicine") {
+	} else if (val == "beauty") {
 		document.getElementById("beauty/medicine").appendChild(li);
 	} else if (val == "drink") {
 		document.getElementById("drinkUL").appendChild(li);
 	} else if (val == "protein") {
 		document.getElementById("proteinUL").appendChild(li);
-	} else if (val == "miscellaneous") {
+	} else if (val == "misc") {
 		document.getElementById("miscellaneousUL").appendChild(li);
-	} else if (val == "frozen foods") {
+	} else if (val == "frozen") {
 		document.getElementById("frozenfoodsUL").appendChild(li);
 	}
 	document.getElementById("myInput").value = "";
