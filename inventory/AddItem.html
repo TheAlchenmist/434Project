@@ -79,13 +79,13 @@
 				<table style="display: flex; justify-content: center; font-family: 'Raleway', sans-serif;">
 					<tr>
 						<td>
-							<input type="radio" id="fresh produce" name="category" value="fresh produce">
+							<input type="radio" id="fresh produce" name="category" value="produce">
 							<label for="fresh produce">Fresh Produce</label><br>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<input type="radio" id="proteins" name="category" value="proteins">
+							<input type="radio" id="proteins" name="category" value="meats">
 							<label for="proteins">Proteins</label><br>
 						</td>
 					</tr>
@@ -103,13 +103,13 @@
 					</tr>
 					<tr>
 						<td>
-							<input type="radio" id="frozen foods" name="category" value="frozen foods">
+							<input type="radio" id="frozen foods" name="category" value="frozen">
 							<label for="frozen foods">Frozen Foods</label><br>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<input type="radio" id="beauty/medicine" name="category" value="beauty/medicine">
+							<input type="radio" id="beauty/medicine" name="category" value="beauty">
 							<label for="beauty/medicine">Beauty/Medicine</label><br>
 						</td>
 					</tr>
@@ -141,11 +141,16 @@
 				function myFunction() {
 
 					var newName, newEdate, newType;
+					const rad = document.querySelectorAll('input[name="category"]');
+					for(const r of rad) {
+						if(r.checked)
+							newType = r.value;
+						console.log(typeof(newType));
+					}
 
 					// Get the value of the input fields
 					newName = document.getElementById("name").value;
 					newEdate = document.getElementById("edate").value;
-					newType = document.getElementById("type").value;
 
 					console.log(inventory);
 
